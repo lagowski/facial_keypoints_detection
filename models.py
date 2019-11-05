@@ -48,7 +48,7 @@ class Net(nn.Module):
         
         # (128, 26, 26) => LINEAR
         #self.fc1 = nn.Linear(128*12*12, 1024)
-        self.fc1 = nn.Linear(64*26*26, 1024)
+        self.fc1 = nn.Linear(128*12*12, 1024)
         
         self.fc2 = nn.Linear(1024, 1024)
         
@@ -61,7 +61,7 @@ class Net(nn.Module):
         x = self.pool(F.relu(self.conv1(x)))
         x = self.pool(F.relu(self.conv2(x)))
         x = self.pool(F.relu(self.conv3(x)))
-        #x = self.pool(F.relu(self.conv4(x)))
+        x = self.pool(F.relu(self.conv4(x)))
         # Drop 0.2
         x = self.conv_drop(x)
 
