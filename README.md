@@ -9,3 +9,5 @@ Second import that model in notebook "2. Define the Network Architecture.ipynb".
 Now you can load or train your own model
 
 Finnaly in "3. Facial Keypoint Detection, Complete Pipeline.ipynb" you can see how model is working with photos.
+
+It is necessary make folder saved_models and inside that store trained models 
